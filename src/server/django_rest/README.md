@@ -57,3 +57,19 @@ vagrant ssh
 python3.5 $DJANGO_DIR/manage.py makemigrations
 python3.5 $DJANGO_DIR/manager.py migrate
 ```
+
+### Few examples
+
+Pour tester vous pouvez utiliser l'interface admin ou celle de l'api. Ci-dessous quelques exemples de requêtes.
+
+**Récupérer la liste des actions possibles**
+- coreapi get http://127.0.0.1:8000/schema/
+ 
+**Lister les snippets**
+- coreapi action snippets list
+
+**Supprimer un snippet**
+- coreapi action snippets delete --param id=1
+
+**Ajouter un snippet**
+- coreapi action snippets create --param title="Example" --file file="path/to/file.*"
